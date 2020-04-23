@@ -25,7 +25,7 @@
 > Si tienes docker instalado en tu estación de trabajo sigue estas instrucciones, de lo contrario, ve a la sección de instalación manual. 
 1. Clona el repositorio.
 2. Abre una terminal en el directorio raíz del proyecto.
-3. Ejecuta el siguiente comando para construir las imagenes locales de docker:
+3. Ejecuta el siguiente comando para construir las imágenes locales de docker:
     ```bash
     $ docker-compose build
     ```
@@ -34,7 +34,7 @@
 5. Abre algún cliente de MySQL en el servidor local, y ejecuta el script `db.sql`.
 
 ### Manual
-1. Obten el proyecto localmente con el siguiente comando:
+1. Obtén el proyecto localmente con el siguiente comando:
     ```bash
     $ go get github.com/josenoriegaa/unidad-3
     ```
