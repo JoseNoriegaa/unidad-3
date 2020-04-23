@@ -1,0 +1,31 @@
+version: '3.3'
+
+volumes:
+  mysql_data:
+    external: true
+
+services:
+  mysql:
+    image: mysql:5.7.29
+    command: ['--default-authentication-plugin=mysql_native_password']
+    restart: always
+    ports:
+      - 3306:3306
+    env_file:
+      - envs/mysql.env
+    volumes:
+      - mysql_data:/var/lib/mysql
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: ['go', 'run', 'main.go']
+    restart: on-failure
+    env_file:
+      - envs/app.env
+    ports:
+      - 3000:3000
+    depends_on:
+      - mysql
+    volumes:
+      - .:/go/src/github.com/josenoriegaa/unidad-3
