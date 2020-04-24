@@ -17,7 +17,6 @@ import (
 func main() {
 	r := gin.Default()
 
-
 	DB_USER := os.Getenv("DB_USER")
 	DB_PWD := os.Getenv("DB_PWD")
 	DB_NAME := os.Getenv("DB_NAME")

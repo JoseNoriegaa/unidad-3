@@ -55,7 +55,7 @@ func CreateBook(c *gin.Context) {
 	// Check if the author exists
 	var author models.Author
 	// Query
-	err := db.Where("fullname LIKE ?", book.Author + "%").First(&author).Error
+	err := db.Where("nombre_completo LIKE ?", book.Author + "%").First(&author).Error
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "The author is not registered."})
 		return

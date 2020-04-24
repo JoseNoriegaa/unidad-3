@@ -13,3 +13,8 @@ type Book struct {
 	CreatedAt time.Time `json:"createdAt" gorm:"column:created_at;"`
 	UpdatedAt time.Time `json:"updatedAt" gorm:"column:updated_at;"`
 }
+
+// TableName sets the table name
+func (Book) TableName() string {
+  return "libros"
+}

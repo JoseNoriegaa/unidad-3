@@ -17,7 +17,7 @@ func FindAuthor(c *gin.Context) {
 	var author models.Author
 
 	// Query
-	err := db.Where("fullname LIKE ?", c.Param("fullname") + "%").First(&author).Error
+	err := db.Where("nombre_completo LIKE ?", c.Param("fullname") + "%").First(&author).Error
 
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "resource not found."})
@@ -68,7 +68,7 @@ func UpdateAuthor(c *gin.Context) {
 	var author models.Author
 
 	// Query
-	err := db.Where("fullname LIKE ?", c.Param("fullname") + "%").First(&author).Error
+	err := db.Where("nombre_completo LIKE ?", c.Param("fullname") + "%").First(&author).Error
 
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "resource not found."})
@@ -98,7 +98,7 @@ func DeleteAuthor(c *gin.Context) {
 	var author models.Author
 
 	// Query
-	err := db.Where("fullname LIKE ?", c.Param("fullname") + "%").First(&author).Error
+	err := db.Where("nombre_completo LIKE ?", c.Param("fullname") + "%").First(&author).Error
 
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "resource not found."})
