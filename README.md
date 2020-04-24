@@ -31,6 +31,9 @@
     ```
 4. Ejecuta el siguiente comando para ejecutar la aplicación.
     > Nota: Es importante que el puerto 3306 y 3000 de tu estación de tu estación de trabajo estén libres.
+    ```bash
+    $ docker-compose up -d
+    ```
 5. Abre algún cliente de MySQL en el servidor local, y ejecuta el script `db.sql`.
 
 ### Manual
