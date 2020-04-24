@@ -34,7 +34,7 @@
     ```bash
     $ docker-compose up -d
     ```
-5. Abre algún cliente de MySQL en el servidor local, y ejecuta el script `db.sql`.
+5. Ejecuta el script sql `db.sql` en tu administrador de bases de datos de MySQL.
 
 ### Manual
 1. Obten el proyecto localmente con el siguiente comando:
